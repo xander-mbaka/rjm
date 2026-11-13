@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="RJM Mixed Farm mark">
+  <defs>
+    <clipPath id="badge"><circle cx="60" cy="60" r="54"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="#2F5D3A"/>
+  <circle cx="60" cy="60" r="54" fill="#FAF6EC"/>
+  <g clip-path="url(#badge)">
+    <circle cx="60" cy="56" r="19" fill="#F2B33D"/>
+    <path d="M0 72 C 22 54, 44 58, 62 70 S 100 60, 120 66 V120 H0Z" fill="#6BA368"/>
+    <path d="M0 86 C 30 70, 70 72, 120 88 V120 H0Z" fill="#2F5D3A"/>
+    <g fill="none" stroke="#6BA368" stroke-width="2.4" stroke-linecap="round">
+      <path d="M10 104 C 36 92, 74 93, 110 106"/>
+      <path d="M4 116 C 36 103, 78 104, 116 118"/>
+    </g>
+    <path d="M60 84 C 60 76, 60 72, 60 66" stroke="#FAF6EC" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M60 72 C 52 72, 48 66, 47 60 C 54 60, 59 64, 60 72Z" fill="#FAF6EC"/>
+    <path d="M60 68 C 67 68, 72 62, 73 55 C 66 55, 61 60, 60 68Z" fill="#FAF6EC"/>
+  </g>
+</svg>

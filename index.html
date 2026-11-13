@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RJM Mixed Farm · Fresh. Organic. From Birongo.</title>
+  <meta name="description" content="Fresh cow and goat milk, mala, yoghurt and cheese; kienyeji, layers, turkey and goose eggs; live and dressed chicken, turkey, goose, rabbit, goat and mutton; organic vegetables and bananas from RJM Mixed Farm, Birongo, Kisii. Order on WhatsApp, pay with M-Pesa." />
+  <meta name="theme-color" content="#2F5D3A" />
+  <meta property="og:title" content="RJM Mixed Farm — Fresh. Organic. From Birongo." />
+  <meta property="og:description" content="Milk, free-range eggs and organic vegetables delivered in Kisii." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand" aria-label="RJM Mixed Farm home"><img src="logo.svg" alt="RJM Mixed Farm" width="176" height="48" /></a>
+      <nav aria-label="Main">
+        <a href="#produce">Produce</a>
+        <a href="#puppies">Puppies</a>
+        <a href="#basket">Family Basket</a>
+        <a href="#institutions">Schools & Hotels</a>
+        <a href="#about">Our farm</a>
+        <a href="#order" class="btn small">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <p class="eyebrow">Birongo · Kisii County</p>
+          <h1>Fresh. Organic.<br />From Birongo.</h1>
+          <p class="lead">Milk from our cows and goats, mala, yoghurt and cheese, free-range eggs, live and dressed poultry and meat, and vegetables grown without chemicals. Collected this morning and delivered to your door in Kisii.</p>
+          <div class="cta-row">
+            <a href="#order" class="btn">Order on WhatsApp</a>
+            <a href="#basket" class="btn ghost">Weekly Family Basket</a>
+          </div>
+          <ul class="trust">
+            <li>🌱 No synthetic chemicals</li>
+            <li>🚚 Delivery Mon–Sat</li>
+            <li>📱 Pay with M-Pesa</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="favicon.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="produce" class="section">
+      <div class="wrap">
+        <h2>Our produce</h2>
+        <p class="sub">Prices in KES. Tap <b>+</b> to add items to your order.</p>
+        <nav class="cat-nav" id="cat-nav" aria-label="Product sections"></nav>
+        <div id="products"></div>
+      </div>
+    </section>
+
+    <section id="puppies" class="section" hidden>
+      <div class="wrap">
+        <p class="eyebrow">From our farm dogs</p>
+        <h2>Puppies for sale</h2>
+        <p class="sub">Each puppy is dewormed and has its first vaccinations, with a vaccination card. Tap a photo to see more.</p>
+        <div id="puppy-list" class="pup-grid"></div>
+      </div>
+    </section>
+
+    <section id="basket" class="section band">
+      <div class="wrap basket">
+        <div>
+          <p class="eyebrow">Subscription · save 5%</p>
+          <h2>The RJM Family Basket</h2>
+          <p>Every week, delivered on your route day:</p>
+          <ul class="ticks">
+            <li>7 litres of fresh milk</li>
+            <li>1 tray (30) of free-range eggs</li>
+            <li>5 bunches of seasonal vegetables (sukuma, managu, saga, spinach…)</li>
+            <li>Bananas in season</li>
+          </ul>
+          <p class="price"><span id="basket-price"></span> / week <small>paid monthly via M-Pesa</small></p>
+          <button class="btn" data-add="basket">Add the Family Basket</button>
+        </div>
+        <div class="gift">
+          <h3>🎁 Living away from home?</h3>
+          <p>Nairobi or diaspora? Send a weekly basket or a one-off <b>Gift Crate</b> to your parents or relatives in Kisii. You pay, we deliver, they eat well.</p>
+          <button class="btn ghost" data-add="gift">Send a Gift Crate</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section">
+      <div class="wrap order">
+        <div>
+          <h2>Your order</h2>
+          <div id="cart" class="cart" aria-live="polite"></div>
+        </div>
+        <form id="order-form" class="card form">
+          <label>Your name <input name="name" required autocomplete="name" /></label>
+          <label>Phone (M-Pesa) <input name="phone" required type="tel" inputmode="tel" autocomplete="tel" placeholder="07xx xxx xxx" /></label>
+          <label>Delivery area
+            <select name="area" required>
+              <option value="">Choose…</option>
+              <option>Kisii town (Mon / Wed / Fri)</option>
+              <option>Birongo &amp; nearby villages (Tue / Sat)</option>
+              <option>I'll collect at the farm gate</option>
+            </select>
+          </label>
+          <label>Landmark / directions <input name="landmark" placeholder="e.g. near the SDA church" /></label>
+          <label>Notes <textarea name="notes" rows="2" placeholder="Gift message, delivery time…"></textarea></label>
+          <button class="btn" type="submit">Send order on WhatsApp</button>
+          <p class="fine">Orders received by 6 pm are delivered on the next route day. Pay by <b>M-Pesa Paybill <span class="paybill"></span>, Account <span class="account"></span></b> on delivery or in advance.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="institutions" class="section band">
+      <div class="wrap two">
+        <div>
+          <p class="eyebrow">Schools · Hospitals · Hotels · Churches</p>
+          <h2>Reliable supply for institutions</h2>
+          <ul class="ticks">
+            <li>Contracted daily or weekly volumes of eggs, milk, vegetables and bananas</li>
+            <li><b>Vegetables and matoke by the kilo</b>, weighed and crated, at bulk prices</li>
+            <li>Prices fixed per school term, volume discounts</li>
+            <li>KRA eTIMS invoices, LPOs accepted</li>
+            <li>Vaccination, hygiene and organic input records available on request</li>
+            <li>Our own delivery vehicle with cooled milk</li>
+          </ul>
+        </div>
+        <form id="inst-form" class="card form">
+          <h3>Request a supply quote</h3>
+          <label>Institution <input name="org" required /></label>
+          <label>Contact person &amp; role <input name="contact" required placeholder="e.g. Bursar" /></label>
+          <label>Phone <input name="phone" required type="tel" inputmode="tel" /></label>
+          <label>What do you need per week?
+            <textarea name="needs" rows="3" required placeholder="e.g. 20 trays eggs, 150 L milk, 80 kg sukuma, 50 kg matoke"></textarea>
+          </label>
+          <button class="btn" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="wrap two">
+        <div>
+          <h2>Our farm</h2>
+          <p>RJM Mixed Farm is a family-owned farm of 2.5 acres in Birongo, Kisii County, home to dairy cows, free-range hens and our own hatchery, turkeys, geese, goats, sheep, pigs, rabbits and our farm dogs, plus a herb and spice garden. We run it as a closed loop. Our cows' manure feeds a biogas digester and compost. The compost feeds our vegetables, bananas and fodder. The fodder feeds the cows, goats, sheep and rabbits, and their manure goes back into the compost.</p>
+          <p>Our hens roam free and eat greens and organic feed, so their eggs have deep yellow yolks. We record every vaccination, spray and harvest, so we can show you exactly how your food was grown.</p>
+          <h3>Our promise</h3>
+          <ul class="ticks">
+            <li>Collected fresh: eggs sold within 7 days, milk the same day</li>
+            <li>No synthetic pesticides or fertilisers</li>
+            <li>No milk, eggs or meat sold from animals under medical treatment</li>
+            <li>Anything not fresh? We replace it on the next delivery</li>
+          </ul>
+        </div>
+        <div class="card community">
+          <h3>🤝 Growing with Birongo</h3>
+          <p>We share compost, banana suckers and Napier splits with neighbouring farmers, host free farmer field days on organic methods, take on student interns, and donate milk and eggs every week to a local feeding programme.</p>
+          <a class="btn ghost" href="#contact">Join a field day</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="wrap footer-inner">
+      <img src="logo-reversed.svg" alt="RJM Mixed Farm" width="220" height="60" />
+      <div>
+        <p><b>RJM Mixed Farm Ltd</b><br />Birongo, Kisii County, Kenya<br /><span class="postal"></span></p>
+        <p>WhatsApp / Call: <a class="phone-link" href="#"></a><br />M-Pesa Paybill: <b class="paybill"></b> · Account: <b class="account"></b></p>
+        <p>Farm gate: 6:30–9:00 &amp; 16:30–19:00 daily<br /><span class="kra-pin"></span></p>
+      </div>
+    </div>
+    <details class="wrap privacy" id="privacy">
+      <summary>Privacy notice</summary>
+      <p>When you order or send an enquiry, your name, phone number, delivery area and order details go to RJM Mixed Farm Ltd on WhatsApp. We use them only to deliver your order, collect payment, and contact you about your orders. We don't sell or share them, except with our delivery rider for your delivery, or where the law requires it. This website saves your basket in your own browser and doesn't use tracking cookies. To see, correct or delete the information we hold about you, message us on the WhatsApp number above (Data Protection Act, 2019).</p>
+    </details>
+    <p class="wrap fine">© <span id="year"></span> RJM Mixed Farm Ltd · Fresh. Organic. From Birongo.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+  <div id="lightbox" class="lightbox" hidden></div>
+  <script src="config.js"></script>
+  <script src="prices.js"></script>
+  <script src="puppies.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

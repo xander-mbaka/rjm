@@ -1,0 +1,103 @@
+// ✏️ Edit this file to update contact details and products. Prices: change them in RJM Farm Manager and save prices.js
+//    (Settings → Update website prices). Prices here are only used for items missing from prices.js.
+window.RJM = {
+  // WhatsApp number in international format, digits only (Kenya: 254 + number without the leading 0)
+  whatsapp: '254720264692',
+  phoneDisplay: '0720 264 692',
+  // M-Pesa: Lipa na M-Pesa → Pay Bill → Business no. → Account no.
+  mpesaPaybill: '516600',
+  mpesaAccount: '0665764001',
+  // Company details shown in the footer (from the registration documents)
+  kraPin: 'P052558448U',
+  postalAddress: 'P.O. Box 3808 – 40200, Kisii',
+
+  // Product sections, in display order
+  categories: [
+    { id: 'dairy', name: 'Milk & dairy', sub: 'From our cows and goats. Mala, yoghurt and cheese are made in small batches; order a day ahead.' },
+    { id: 'eggs', name: 'Eggs' },
+    { id: 'chicks', name: 'Chicks & hatching eggs', sub: 'From our own hatchery. Vaccinated against Newcastle & Gumboro as age allows. The price rises with age.' },
+    { id: 'live', name: 'Live animals & birds', sub: 'Price per animal' },
+    { id: 'dressed', name: 'Dressed meat', sub: 'Price per kg. We weigh each order and confirm the exact amount on WhatsApp.' },
+    { id: 'fish', name: 'Fish', sub: 'Fresh tilapia from our pond, sold by the kilo. Gutted and scaled on request.' },
+    { id: 'herbs', name: 'Herbs & spices', sub: 'Grown without chemicals; great for hotels and kitchens.' },
+    { id: 'produce', name: 'Fruit & vegetables', sub: 'Bunches for households. Schools, hospitals and hotels: vegetables and matoke by the kilo (bulk prices).' },
+  ],
+
+  products: [
+    // Milk & dairy
+    { id: 'milk', cat: 'dairy', name: 'Fresh cow milk', unit: 'litre', price: 70, icon: '🥛', note: 'Cooled within 2 hours of milking' },
+    { id: 'goat_milk', cat: 'dairy', name: 'Goat milk', unit: 'litre', price: 150, icon: '🐐', note: 'Rich and easy to digest' },
+    { id: 'mala', cat: 'dairy', name: 'Mala (fermented milk)', unit: 'litre', price: 140, icon: '🥛', note: 'Traditional sour milk' },
+    { id: 'yoghurt', cat: 'dairy', name: 'Yoghurt', unit: 'litre', price: 240, icon: '🍶', note: 'Natural, lightly sweetened' },
+    { id: 'cheese', cat: 'dairy', name: 'Farm cheese', unit: '250 g', price: 350, icon: '🧀', note: 'Fresh farm cheese, made to order' },
+    // Eggs
+    { id: 'eggs', cat: 'eggs', name: 'Kienyeji eggs', unit: 'tray of 30', price: 540, icon: '🥚', note: 'Free-range, deep yellow yolks' },
+    { id: 'eggs6', cat: 'eggs', name: 'Kienyeji eggs', unit: '6 eggs', price: 110, icon: '🥚', note: 'Small pack' },
+    { id: 'layers_eggs', cat: 'eggs', name: 'Layers eggs', unit: 'tray of 30', price: 420, icon: '🥚', note: 'Fresh, graded, great value' },
+    { id: 'turkey_egg', cat: 'eggs', name: 'Turkey eggs', unit: 'egg', price: 60, icon: '🥚', note: 'Large; in season — or for hatching' },
+    { id: 'goose_egg', cat: 'eggs', name: 'Goose eggs', unit: 'egg', price: 100, icon: '🥚', note: 'Extra large; in season — or for hatching' },
+    // Chicks & hatching eggs
+    { id: 'chick_d0', cat: 'chicks', name: 'Day-old chicks', unit: 'chick', price: 110, icon: '🐣', note: 'Improved kienyeji' },
+    { id: 'chick_1w', cat: 'chicks', name: 'Chicks — 1 week', unit: 'chick', price: 150, icon: '🐥', note: 'Brooded & started' },
+    { id: 'chick_2w', cat: 'chicks', name: 'Chicks — 2 weeks', unit: 'chick', price: 200, icon: '🐥', note: '' },
+    { id: 'chick_3w', cat: 'chicks', name: 'Chicks — 3 weeks', unit: 'chick', price: 250, icon: '🐥', note: '' },
+    { id: 'chick_1m', cat: 'chicks', name: 'Chicks — 1 month', unit: 'chick', price: 320, icon: '🐔', note: 'Hardier, off heat' },
+    { id: 'poult_d0', cat: 'chicks', name: 'Turkey poults — day-old', unit: 'poult', price: 500, icon: '🦃', note: 'In season' },
+    { id: 'gosling_d0', cat: 'chicks', name: 'Goslings — day-old', unit: 'gosling', price: 600, icon: '🦢', note: 'In season' },
+    { id: 'hatching_egg', cat: 'chicks', name: 'Fertile hatching eggs', unit: 'egg', price: 30, icon: '🥚', note: 'Kienyeji; sorted & under 7 days old' },
+    // Live (per head)
+    { id: 'chicken', cat: 'live', name: 'Kienyeji chicken', unit: 'bird', price: 1000, icon: '🐓', note: 'Indigenous, free-range' },
+    { id: 'chicken_improved', cat: 'live', name: 'Improved kienyeji chicken', unit: 'bird', price: 800, icon: '🐔', note: 'Free-range, meaty' },
+    { id: 'broiler', cat: 'live', name: 'Broiler', unit: 'bird', price: 550, icon: '🐔', note: 'Ready at 5–6 weeks' },
+    { id: 'layer', cat: 'live', name: 'Layer hen', unit: 'bird', price: 450, icon: '🐔', note: 'Spent hens; point-of-lay on request' },
+    { id: 'turkey', cat: 'live', name: 'Turkey', unit: 'bird', price: 3500, icon: '🦃', note: 'Great for Christmas & celebrations' },
+    { id: 'goose', cat: 'live', name: 'Goose', unit: 'bird', price: 2500, icon: '🦢', note: '' },
+    { id: 'rabbit', cat: 'live', name: 'Rabbit', unit: 'rabbit', price: 1000, icon: '🐇', note: 'Meat or breeding stock' },
+    { id: 'goat', cat: 'live', name: 'Goat', unit: 'goat', price: 9000, icon: '🐐', note: 'Price depends on size — we confirm on WhatsApp' },
+    { id: 'sheep', cat: 'live', name: 'Sheep', unit: 'sheep', price: 8000, icon: '🐑', note: 'Price depends on size — we confirm on WhatsApp' },
+    { id: 'pig', cat: 'live', name: 'Pig (porker)', unit: 'pig', price: 18000, icon: '🐖', note: 'Price depends on weight — we confirm on WhatsApp' },
+    { id: 'piglet', cat: 'live', name: 'Piglet (weaner)', unit: 'piglet', price: 4000, icon: '🐷', note: '8 weeks, dewormed, iron given' },
+    { id: 'cattle_live', cat: 'live', name: 'Cattle (bull / steer)', unit: 'head', price: 60000, icon: '🐂', note: 'Price depends on size — we confirm on WhatsApp' },
+    // Dressed (per kg)
+    { id: 'kienyeji_kg', cat: 'dressed', name: 'Kienyeji chicken, dressed', unit: 'kg', price: 700, icon: '🍗', note: '' },
+    { id: 'improved_kg', cat: 'dressed', name: 'Improved kienyeji, dressed', unit: 'kg', price: 600, icon: '🍗', note: '' },
+    { id: 'broiler_kg', cat: 'dressed', name: 'Broiler, dressed', unit: 'kg', price: 450, icon: '🍗', note: 'Whole birds, about 1.5–2 kg each' },
+    { id: 'layer_kg', cat: 'dressed', name: 'Layer hen, dressed', unit: 'kg', price: 450, icon: '🍗', note: 'Ideal for stews' },
+    { id: 'breast_kg', cat: 'dressed', name: 'Chicken breasts', unit: 'kg', price: 650, icon: '🍗', note: 'Bone-in or boneless on request' },
+    { id: 'thigh_kg', cat: 'dressed', name: 'Chicken thighs', unit: 'kg', price: 550, icon: '🍗', note: '' },
+    { id: 'drumstick_kg', cat: 'dressed', name: 'Chicken drumsticks', unit: 'kg', price: 550, icon: '🍗', note: 'Great for grilling' },
+    { id: 'wing_kg', cat: 'dressed', name: 'Chicken wings', unit: 'kg', price: 450, icon: '🍗', note: 'Great for frying & grilling' },
+    { id: 'gizzard_kg', cat: 'dressed', name: 'Chicken gizzards', unit: 'kg', price: 400, icon: '🍗', note: 'Cleaned' },
+    { id: 'soup_pack_kg', cat: 'dressed', name: 'Chicken soup packs', unit: 'kg', price: 250, icon: '🍲', note: 'Backs, necks & feet, for soup and stock' },
+    { id: 'turkey_kg', cat: 'dressed', name: 'Turkey, dressed', unit: 'kg', price: 800, icon: '🦃', note: '' },
+    { id: 'goose_kg', cat: 'dressed', name: 'Goose, dressed', unit: 'kg', price: 750, icon: '🦢', note: '' },
+    { id: 'rabbit_kg', cat: 'dressed', name: 'Rabbit, dressed', unit: 'kg', price: 700, icon: '🐇', note: 'Lean white meat' },
+    { id: 'goat_kg', cat: 'dressed', name: 'Goat meat (chevon)', unit: 'kg', price: 800, icon: '🥩', note: '' },
+    { id: 'mutton_kg', cat: 'dressed', name: 'Mutton', unit: 'kg', price: 750, icon: '🥩', note: '' },
+    { id: 'beef_kg', cat: 'dressed', name: 'Beef', unit: 'kg', price: 600, icon: '🥩', note: 'From our own cattle, inspected' },
+    { id: 'pork_kg', cat: 'dressed', name: 'Pork', unit: 'kg', price: 500, icon: '🥓', note: 'Inspected; order a day ahead' },
+    // Milk & produce
+    { id: 'sukuma', cat: 'produce', name: 'Sukuma wiki', unit: 'bunch', price: 30, icon: '🥬', note: 'Harvested to order' },
+    { id: 'indigenous', cat: 'produce', name: 'Managu / saga / terere', unit: 'bunch', price: 40, icon: '🌿', note: 'African indigenous vegetables' },
+    { id: 'spinach', cat: 'produce', name: 'Spinach', unit: 'bunch', price: 30, icon: '🥗', note: '' },
+    { id: 'sukuma_kg', cat: 'produce', name: 'Sukuma wiki — bulk', unit: 'kg', price: 50, icon: '🥬', note: 'For institutions; weighed & crated' },
+    { id: 'spinach_kg', cat: 'produce', name: 'Spinach — bulk', unit: 'kg', price: 60, icon: '🥗', note: 'For institutions; weighed & crated' },
+    { id: 'indigenous_kg', cat: 'produce', name: 'Managu / saga / terere — bulk', unit: 'kg', price: 100, icon: '🌿', note: 'For institutions; weighed & crated' },
+    { id: 'matoke_kg', cat: 'produce', name: 'Matoke — bulk', unit: 'kg', price: 40, icon: '🍌', note: 'For institutions; by weight' },
+    { id: 'bananas', cat: 'produce', name: 'Kisii bananas', unit: 'bunch', price: 500, icon: '🍌', note: 'Matoke or ripening — in season' },
+    { id: 'avocado', cat: 'produce', name: 'Hass avocado', unit: 'kg', price: 100, icon: '🥑', note: 'In season' },
+    { id: 'avocado_local', cat: 'produce', name: 'Local avocado', unit: 'kg', price: 60, icon: '🥑', note: 'Big, creamy local fruit; in season' },
+    { id: 'tilapia', cat: 'fish', name: 'Tilapia (fresh, whole)', unit: 'kg', price: 450, icon: '🐟', note: 'Gutted & scaled on request' },
+    // Herbs & spices
+    { id: 'dhania', cat: 'herbs', name: 'Dhania (coriander)', unit: 'bunch', price: 20, icon: '🌿', note: '' },
+    { id: 'mint', cat: 'herbs', name: 'Mint', unit: 'bunch', price: 30, icon: '🌱', note: 'For tea & salads' },
+    { id: 'rosemary', cat: 'herbs', name: 'Rosemary', unit: 'bunch', price: 50, icon: '🌿', note: '' },
+    { id: 'basil', cat: 'herbs', name: 'Basil', unit: 'bunch', price: 50, icon: '🌿', note: '' },
+    { id: 'lemongrass', cat: 'herbs', name: 'Lemongrass', unit: 'bunch', price: 30, icon: '🌾', note: 'For tea' },
+    { id: 'chilli', cat: 'herbs', name: 'Chillies', unit: 'kg', price: 200, icon: '🌶️', note: '' },
+    { id: 'ginger', cat: 'herbs', name: 'Ginger', unit: 'kg', price: 250, icon: '🌱', note: '' },
+    { id: 'garlic', cat: 'herbs', name: 'Garlic', unit: 'kg', price: 400, icon: '🧄', note: '' },
+  ],
+  basket: { id: 'basket', name: 'Family Basket (weekly)', unit: 'week', price: 1350, icon: '🧺' },
+  gift: { id: 'gift', name: 'Gift Crate', unit: 'crate', price: 1500, icon: '🎁' },
+};

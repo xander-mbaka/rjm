@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mileage log (blank)</title><style>
+  @page { size: A4; margin: 10mm 9mm; }
+  body { font: 9.5pt/1.3 Arial, Helvetica, sans-serif; color: #111; margin: 0; }
+  h1 { font-size: 14pt; margin: 0; color: #2f5d3a; }
+  h2 { font-size: 10.5pt; margin: 10px 0 4px; color: #2f5d3a; }
+  .top { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #2f5d3a; padding-bottom: 4px; }
+  .muted { color: #555; font-size: 8.5pt; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  th, td { border: 1px solid #777; padding: 3px 4px; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+  thead th { background: #e8f0e8; font-size: 8.5pt; }
+  td { height: 15pt; }
+  .n { text-align: right; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .claim th { width: 62%; font-weight: normal; background: #f6f6f2; }
+  .sign { display: grid; grid-template-columns: 1.3fr 1fr 0.7fr; gap: 10px; margin-top: 16px; }
+  .sign div { border-top: 1px solid #333; padding-top: 2px; font-size: 8.5pt; }
+  ul { margin: 2px 0; padding-left: 16px; } li { margin: 0; }
+  .office { margin-top: 12px; border: 1.5px dashed #2f5d3a; border-radius: 6px; padding: 5px 8px; font-size: 8.5pt; }
+  .print { margin: 8px 0; } @media print { .print { display: none; } }
+</style></head><body>
+<button class="print" onclick="print()">Print</button>
+<div class="top"><h1>RJM Mixed Farm Ltd: private vehicle mileage log &amp; claim</h1><span>Month: ____________________</span></div>
+<p class="muted">Company no. PVT-RQ13936E · KRA PIN P052558448U · Hand in by the 5th of the next month with the receipts.</p>
+<div class="grid">
+<table><tbody>
+<tr><th>Driver</th><td></td></tr><tr><th>Vehicle</th><td></td></tr><tr><th>Licence no. / expiry</th><td></td></tr>
+<tr><th>Insurer / policy / expiry</th><td></td></tr><tr><th>Business use confirmed by insurer</th><td></td></tr>
+</tbody></table>
+<div><b>Rate: KES ______ per km</b> (covers fuel, oil, tyres, service, insurance and wear). Parking, tolls and county fees are paid on top with receipts.
+<ul><li><b>Claim:</b> buying farm inputs and parts, deliveries, vet and market trips, banking and official visits for the company, customer and supplier meetings.</li>
+<li><b>Don't claim:</b> home to farm and back, personal stops (write only the farm km), trips in company vehicles, fines.</li></ul></div>
+</div>
+<h2>Trip log: read the odometer at the start and end of every trip</h2>
+<table><colgroup><col style="width:10%"><col style="width:18%"><col style="width:28%"><col style="width:10%"><col style="width:10%"><col style="width:7%"><col style="width:10%"><col style="width:7%"></colgroup>
+<thead><tr><th>Date</th><th>From → to</th><th>Farm purpose (what, for whom)</th><th>Odometer start</th><th>Odometer end</th><th>Farm km</th><th>Parking / tolls KES (rcpt)</th><th>Initials</th></tr></thead>
+<tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<h2>Monthly claim</h2>
+<div class="grid">
+<table class="claim"><tbody>
+<tr><th>A. Farm km this month</th><td class="n">km</td></tr><tr><th>B. Rate per km</th><td class="n">KES</td></tr><tr><th>C. Mileage due (A × B)</th><td class="n">KES</td></tr><tr><th>D. Parking, tolls and fees (receipts attached)</th><td class="n">KES</td></tr><tr><th><b>E. Total claim (C + D)</b></th><td class="n"><b>KES</b></td></tr>
+</tbody></table>
+<table class="claim"><tbody>
+<tr><th>Odometer at the first trip</th><td class="n">km</td></tr><tr><th>Odometer at the last trip</th><td class="n">km</td></tr><tr><th>Farm share of km driven</th><td class="n">%</td></tr><tr><th>Paid on / M-Pesa or bank ref.</th><td class="n"></td></tr>
+</tbody></table>
+</div>
+<p class="muted">I confirm these trips were for RJM Mixed Farm Ltd business and the readings are true. When the director is the claimant, the accountant checks and initials the claim before payment.</p>
+<div class="sign"><div>Claimant: name &amp; signature</div><div>Approved by: name &amp; signature</div><div>Date</div></div>
+<div class="office"><b>Office use:</b> trips entered in Farm Manager (More → Private vehicle mileage) on ____________ by ______________________ · claim submitted ☐ approved ☐ paid ☐</div>
+</body></html>
