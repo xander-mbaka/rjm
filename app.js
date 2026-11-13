@@ -266,6 +266,10 @@
   document.querySelectorAll('.account').forEach((el) => (el.textContent = C.mpesaAccount || '—'));
   document.querySelectorAll('.postal').forEach((el) => (el.textContent = C.postalAddress || ''));
   document.querySelectorAll('.kra-pin').forEach((el) => (el.textContent = C.kraPin ? `KRA PIN ${C.kraPin}` : ''));
+  document.querySelectorAll('.legal-counsel').forEach((el) => {
+    el.textContent = C.legalCounsel ? `Legal counsel: ${C.legalCounsel}` : '';
+    if (C.legalCounsel) el.before(document.createElement('br'));
+  });
   const phone = $('.phone-link');
   phone.textContent = C.phoneDisplay;
   phone.href = `https://wa.me/${C.whatsapp}`;

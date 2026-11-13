@@ -10,6 +10,7 @@ window.RJM = {
   // Company details shown in the footer (from the registration documents)
   kraPin: 'P052558448U',
   postalAddress: 'P.O. Box 3808 – 40200, Kisii',
+  legalCounsel: 'Mundui Murai & Mwaniki LLP Advocates',
 
   // Product sections, in display order
   categories: [
