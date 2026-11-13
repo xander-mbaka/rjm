@@ -266,9 +266,29 @@
   document.querySelectorAll('.account').forEach((el) => (el.textContent = C.mpesaAccount || '—'));
   document.querySelectorAll('.postal').forEach((el) => (el.textContent = C.postalAddress || ''));
   document.querySelectorAll('.kra-pin').forEach((el) => (el.textContent = C.kraPin ? `KRA PIN ${C.kraPin}` : ''));
+  const LC = typeof C.legalCounsel === 'string' ? { name: C.legalCounsel } : C.legalCounsel || {};
   document.querySelectorAll('.legal-counsel').forEach((el) => {
-    el.textContent = C.legalCounsel ? `Legal counsel: ${C.legalCounsel}` : '';
-    if (C.legalCounsel) el.before(document.createElement('br'));
+    if (!LC.name) return;
+    const line = (text) => {
+      el.append(document.createElement('br'), text);
+    };
+    const head = document.createElement('b');
+    head.textContent = 'Legal counsel';
+    el.append(head, document.createElement('br'), LC.name);
+    if (LC.address) line(LC.address);
+    if (LC.postal) line(LC.postal);
+    if (LC.phones && LC.phones.length) {
+      el.append(document.createElement('br'), 'Tel: ');
+      LC.phones.forEach((p, i) => {
+        if (i) el.append(', ');
+        const a = document.createElement('a');
+        a.href = `tel:${p.replace(/\s+/g, '')}`;
+        a.textContent = p;
+        el.append(a);
+      });
+    }
+    if (LC.pin) line(`PIN ${LC.pin}`);
+    el.hidden = false;
   });
   const phone = $('.phone-link');
   phone.textContent = C.phoneDisplay;

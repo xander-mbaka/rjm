@@ -10,7 +10,14 @@ window.RJM = {
   // Company details shown in the footer (from the registration documents)
   kraPin: 'P052558448U',
   postalAddress: 'P.O. Box 3808 – 40200, Kisii',
-  legalCounsel: 'Mundui Murai & Mwaniki LLP Advocates',
+  // Legal counsel, shown in the footer. Leave name empty to hide the block.
+  legalCounsel: {
+    name: 'Mundui Murai & Mwaniki LLP Advocates',
+    address: 'Longonot Place, 7th Floor, Kijabe Street',
+    postal: 'P.O. Box 54 – 00600, Nairobi',
+    phones: ['0724 639 856', '0713 874 830'],
+    pin: 'P052562291K',
+  },
 
   // Product sections, in display order
   categories: [
